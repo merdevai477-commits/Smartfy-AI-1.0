@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "buildCommand": "cd backend && npm install --legacy-peer-deps && npm run build",
+  "outputDirectory": "backend/dist",
+  "installCommand": "echo 'Skipping root install'",
+  "builds": [
+    {
+      "src": "backend/dist/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/dist/server.js"
+    },
+    {
+      "src": "/health",
+      "dest": "backend/dist/server.js"
+    }
+  ]
+}
