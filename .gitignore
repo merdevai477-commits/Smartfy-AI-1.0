@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+/frontend/dist
+/backend/dist
+/frontend/.next/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Environment files — NEVER commit secrets
+.env
+.env.local
+.env.*.local
+.env.*
+!.env.example
+!.env.production
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+
+# Misc
+*.tgz
+.cache
+bun.lockb
